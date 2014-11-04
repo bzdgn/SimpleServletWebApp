@@ -112,6 +112,74 @@ public class HttpServlet extends GenericServlet
 	}
 }
 
+URL-CLASS MAPPING
+*****************
+*****************
+Ok, we want to map 2 different class to 2 paths one by one;
+
+com.levent.ServletHelloWorld	->	/hello
+com.levent.SimpleServlet		->	/home
+
+	1) Via WEB-INF/Web.xml
+	**********************
+	<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+			  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+			  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+			  version="3.0">
+		
+		<!-- SimpleServlet is mapped to servlet1 -->
+		<servlet>
+			<servlet-name>servlet1</servlet-name>
+			<servlet-class>com.levent.SimpleServlet</servlet-class>
+		</servlet>
+		
+		<!-- servlet1 is mapped to /home -->
+		<servlet-mapping>
+			<servlet-name>servlet1</servlet-name>
+			<url-pattern>/home</url-pattern>
+		</servlet-mapping>
+		
+		
+		<!-- ServletHelloWorld is mapped to servlet2 -->
+		<servlet>
+			<servlet-name>servlet2</servlet-name>
+			<servlet-class>com.levent.ServletHelloWorld</servlet-class>
+		</servlet>
+		
+		<!-- servlet2 is mapped to /hello -->
+		<servlet-mapping>
+			<servlet-name>servlet2</servlet-name>
+			<url-pattern>/hello</url-pattern>
+		</servlet-mapping> 
+		
+	</web-app>
+
+	2) With annotations;
+	********************
+	Just leave WEB-INF/web.xml empty as below;
+
+	<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+			  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+			  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+			  version="3.0">
+			  
+	</web-app>
+
+	On each of the classes add the annotation on just top of the class definition as below;
+	@WebServlet("/home")
+	public class SimpleServlet extends HttpServlet
+
+	@WebServlet("/hello")
+	public class ServletHelloWorld extends HttpServlet
+
+Now you can reach the classes with;
+
+http://localhost:8080/SimpleServletWebApp/hello
+http://localhost:8080/SimpleServletWebApp/home
+
+
 # project link: https://github.com/bzdgn/SimpleServletWebApp
 # ssh link: 	git@github.com:bzdgn/SimpleServletWebApp.git
 # link: 		http://localhost:8080/SimpleServletWebApp/Simple/home
