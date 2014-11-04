@@ -20,15 +20,68 @@ public class SimpleResponseSample extends HttpServlet
 		String output = "";
 		String paramName;
 		
-		if( ( paramName = req.getParameter("name") ) != null )
+		if
+		(
+			( ( paramName = req.getParameter("name") ) != null )
+				&&
+			( paramName != "" ) 
+		)
 		{
-			output+="<html><head><title>" + paramName + " you are wellcome!</title></head>";
-			output+="<body><h1>HELLO " + paramName + "</h1></body></html>";
+			//HTML: START
+			output+="<html>";
+			
+			//HEAD: START
+			output+="<head>";
+			
+			//TITLE: /
+			output+="<title>" + paramName + " you are wellcome!</title>";
+			
+			//HEAD: END
+			output+="</head>";
+			
+			//BODY: START
+			output+="<body>";
+			
+			//h1
+			output+="<h1>HELLO " + paramName + ", You are wellcome!" + "</h1>";
+			
+			//h3
+			output+="<h3>" + "METHOD: \"GET\" " + "</h3>";
+			
+			//BODY: END
+			output+="</body>";
+			
+			//HTML: END
+			output+="</html>";
 		}
 		else
 		{
-			output+="<html><head><title>" + "YOU ARE NOT WELLCOME!" + " you are wellcome!</title></head>";
-			output+="<body><h1>" + "You have to enter a name!" + "</h1></body></html>";
+			//HTML: START
+			output+="<html>";
+			
+			//HEAD: START
+			output+="<head>";
+			
+			//TITLE: /
+			output+="<title>" + "YOU ARE NOT WELLCOME!" + " you are wellcome!</title>";
+			
+			//HEAD: END
+			output+="</head>";
+			
+			//BODY: START
+			output+="<body>";
+			
+			//h1
+			output+="<h1>" + "You have to enter a name!" + "</h1>";
+			
+			//h3
+			output+="<h3>" + "METHOD: \"GET\" " + "</h3>";
+			
+			//BODY: END
+			output+="</body>";
+			
+			//HTML: END
+			output+="</html>";
 		}
 		
 		resp.getWriter().write(output);
@@ -41,15 +94,68 @@ public class SimpleResponseSample extends HttpServlet
 		String output = "";
 		String paramName;
 		
-		if( ( paramName = req.getParameter("name") ) != null )
+		if
+		(
+			( ( paramName = req.getParameter("name") ) != null )
+				&&
+			( paramName != "" ) 
+		)
 		{
-			output+="<html><head><title>" + paramName + " you are wellcome!</title></head>";
-			output+="<body><h1>HELLO " + paramName + "</h1></body></html>";
+			//HTML: START
+			output+="<html>";
+			
+			//HEAD: START
+			output+="<head>";
+			
+			//TITLE: /
+			output+="<title>" + paramName + " you are wellcome!</title>";
+			
+			//HEAD: END
+			output+="</head>";
+			
+			//BODY: START
+			output+="<body>";
+			
+			//h1
+			output+="<h1>HELLO " + paramName + ", You are wellcome!" + "</h1>";
+			
+			//h3
+			output+="<h3>" + "METHOD: \"GET\" " + "</h3>";
+			
+			//BODY: END
+			output+="</body>";
+			
+			//HTML: END
+			output+="</html>";
 		}
 		else
 		{
-			output+="<html><head><title>" + "YOU ARE NOT WELLCOME!" + " you are wellcome!</title></head>";
-			output+="<body><h1>" + "You have to enter a name!" + "</h1></body></html>";
+			//HTML: START
+			output+="<html>";
+			
+			//HEAD: START
+			output+="<head>";
+			
+			//TITLE: /
+			output+="<title>" + "YOU ARE NOT WELLCOME!" + " you are wellcome!</title>";
+			
+			//HEAD: END
+			output+="</head>";
+			
+			//BODY: START
+			output+="<body>";
+			
+			//h1
+			output+="<h1>" + "You have to enter a name!" + "</h1>";
+			
+			//h3
+			output+="<h3>" + "METHOD: \"GET\" " + "</h3>";
+			
+			//BODY: END
+			output+="</body>";
+			
+			//HTML: END
+			output+="</html>";
 		}
 		
 		resp.getWriter().write(output);
