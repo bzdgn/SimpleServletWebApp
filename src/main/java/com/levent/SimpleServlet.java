@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//@WebServlet("/home")
+@WebServlet("/home")
 public class SimpleServlet extends HttpServlet
 {
 //	http://localhost:8080/SimpleServletWebApp/Simple/home

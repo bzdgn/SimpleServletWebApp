@@ -1,0 +1,47 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	      version="3.0">
+	   
+	<!-- <display-name>SimpleServletWebApp</display-name> -->  
+	
+  
+	<!-- Instead of using @WebServlet("/path") annotation you can use web.xml servlet-mapping configuration
+	<servlet>
+		<servlet-name>SimpleServletWebApp</servlet-name>
+		<servlet-class>com.levent.SimpleServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SimpleServletWebApp</servlet-name>
+		<url-pattern>/simple</url-pattern>
+	</servlet-mapping> 
+	-->
+	
+	<!-- SimpleServlet is mapped to servlet1 -->
+	<servlet>
+		<servlet-name>servlet1</servlet-name>
+		<servlet-class>com.levent.SimpleServlet</servlet-class>
+	</servlet>
+	
+	<!-- servlet1 is mapped to /home -->
+	<servlet-mapping>
+		<servlet-name>servlet1</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- ServletHelloWorld is mapped to servlet2 -->
+	<servlet>
+		<servlet-name>servlet2</servlet-name>
+		<servlet-class>com.levent.ServletHelloWorld</servlet-class>
+	</servlet>
+	
+	<!-- servlet2 is mapped to /hello -->
+	<servlet-mapping>
+		<servlet-name>servlet2</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping> 
+   
+</web-app>
