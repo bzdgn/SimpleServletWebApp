@@ -179,6 +179,18 @@ Now you can reach the classes with;
 http://localhost:8080/SimpleServletWebApp/hello
 http://localhost:8080/SimpleServletWebApp/home
 
+And please notify that (from the WebServlet class;
+/**
+ * Annotation used to declare a servlet.
+ *
+ * <p>This annotation is processed by the container at deployment time,
+ * and the corresponding servlet made available at the specified URL
+ * patterns.
+ * 
+ * @see javax.servlet.Servlet
+ *
+ * @since Servlet 3.0
+ */
 
 # project link: https://github.com/bzdgn/SimpleServletWebApp
 # ssh link: 	git@github.com:bzdgn/SimpleServletWebApp.git
