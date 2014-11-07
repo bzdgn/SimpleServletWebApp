@@ -5,7 +5,7 @@
 		</title>
 	</head>
 	<body>
-		<form action="nameGate2" method="get">
+		<form action="nameGate2" method="put">
 			<p>
 				Name: <input type="text" name="name"/>
 			</p>

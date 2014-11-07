@@ -4,6 +4,21 @@
 	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	      version="3.0">
    
+   	<!-- ServletInitParam is mapped to servletInitDemo -->
+	<servlet>
+		<servlet-name>servletInitDemo</servlet-name>
+		<servlet-class>com.levent.ServletInitParam</servlet-class>
+		<init-param>
+			<param-name>ProductName</param-name>
+			<param-value>Interesting App</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>servletInitDemo</servlet-name>
+		<url-pattern>/initDemo2</url-pattern>
+	</servlet-mapping> 
+	
    <!-- Using the servlet-api 3.0 @WebServlet("/path") annotations -->
    <!-- Check out _web.xml.bkp for web.xml class-servlet-url mapping configurations -->
 </web-app>

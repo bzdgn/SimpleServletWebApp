@@ -59,6 +59,9 @@ public class SimpleResponseSample2 extends HttpServlet
 			resp.sendRedirect("index2.jsp");
 		}
 		
+//		resp.setContentType("text/xml");
+		resp.setContentType("text/html");
+		
 		resp.getWriter().write(output);
 	}
 	
@@ -108,6 +111,7 @@ public class SimpleResponseSample2 extends HttpServlet
 			resp.sendRedirect("index2.jsp");
 		}
 		
+		resp.setContentType("text/xml");
 		resp.getWriter().write(output);
 	}
 }
